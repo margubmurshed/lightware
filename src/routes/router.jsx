@@ -57,7 +57,7 @@ export const router = createBrowserRouter([
             element: <UserOrders />,
           },
           {
-            path: "/dashboard/orders",
+            path: "/dashboard/payment",
             element: <Payment />
           }
         ],
