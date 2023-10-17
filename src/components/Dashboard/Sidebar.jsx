@@ -9,6 +9,9 @@ const Sidebar = () => {
             {/* Dashboard Navigation */}
             <ul className="text-[15px] font-semibold">
                 <Link to='/dashboard'>
+                    <li className="hover:bg-[#F1F1F1] hover:cursor-pointer py-2 px-4 rounded-md transition-all duration-500 w-full min-w-[200px]">Dashboard</li>
+                </Link>
+                <Link to='/dashboard/orders'>
                     <li className="hover:bg-[#F1F1F1] hover:cursor-pointer py-2 px-4 rounded-md transition-all duration-500 w-full min-w-[200px]">Orders</li>
                 </Link>
                 <Link to='/dashboard/address'>
