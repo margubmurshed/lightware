@@ -20,17 +20,11 @@ const DashboardHome = () => {
                 </Link>
                 <Link to='/'>
                     <div className='min-h-[180px] group flex flex-col gap-4 justify-center items-center hover:bg-[#F1F1F1] transition-all duration-300 cursor-pointer shadow-md rounded-md py-5'>
-                        <AiOutlineDownload className='text-[#777777] text-[48px] group-hover:text-[#555555] transition-all duration-300' />
-                        <span className='uppercase text-[14px] font-semibold text-[#555555]'>Downloads</span>
-                    </div>
-                </Link>
-                <Link to='/'>
-                    <div className='min-h-[180px] group flex flex-col gap-4 justify-center items-center hover:bg-[#F1F1F1] transition-all duration-300 cursor-pointer shadow-md rounded-md py-5'>
                         <IoLocationOutline className='text-[#777777] text-[48px] group-hover:text-[#555555] transition-all duration-300' />
                         <span className='uppercase text-[14px] font-semibold text-[#555555]'>Addresses</span>
                     </div>
                 </Link>
-                <Link to='/'>
+                <Link to='/dashboard/account-details'>
                     <div className='min-h-[180px] group flex flex-col gap-4 justify-center items-center hover:bg-[#F1F1F1] transition-all duration-300 cursor-pointer shadow-md rounded-md py-5'>
                         <VscAccount className='text-[#777777] text-[48px] group-hover:text-[#555555] transition-all duration-300' />
                         <span className='uppercase text-[14px] font-semibold text-[#555555]'>Account Details</span>

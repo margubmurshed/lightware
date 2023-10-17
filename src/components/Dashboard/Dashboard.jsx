@@ -5,10 +5,12 @@ import Sidebar from "./Sidebar";
 const Dashboard = () => {
     return (
         <div>
-            <DashboardBanner />    
+            <DashboardBanner />
             <div className="flex flex-col md:flex-row gap-8 md:gap-4 my-12 px-10">
                 <Sidebar />
-                <Outlet />
+                <div className="grow">
+                    <Outlet />
+                </div>
             </div>
         </div>
     );
