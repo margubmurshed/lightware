@@ -1,6 +1,6 @@
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineShoppingCart,AiFillEye,AiFillHeart } from 'react-icons/ai';
 import { GiNetworkBars } from 'react-icons/gi';
 
@@ -8,7 +8,15 @@ import './ProductCard.css'
 
 const ProductCard = ({ productData }) => {
     const { id, image, title, newprice, oldprice, review } = productData
+
+    const [popupContent, setPopupContent] = useState([])
+    const [popupTogle, setPopupTogle] = useState(false)
+    const changeContent = (productData) => {
+        setPopupContent([productData])
+        setPopupTogle(!popupTogle)
+    }
     return (
+        <div>
         <div className='mx-3 border rounded-md relative main-card cursor-pointer'>
             <div>
                 <img className='w-full h-full rounded-md' src={image} alt="" />
@@ -18,12 +26,12 @@ const ProductCard = ({ productData }) => {
                             <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>Add To Wish List</p>
                     </div>
 
-                    <div className='flex items-center space-x-2 wishCard cursor-pointer'>
+                    <div  className='flex items-center space-x-2 wishCard cursor-pointer'>
                         <p className='text-xl'><GiNetworkBars></GiNetworkBars></p>
                         <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>View Details</p>
                     </div>
 
-                    <div className='flex items-center space-x-2 wishCard cursor-pointer'>
+                    <div onClick={() => changeContent(productData)} className='flex items-center space-x-2 wishCard cursor-pointer'>
                         <p className='text-xl'><AiFillEye></AiFillEye></p>
                         <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>Quick View</p>
                     </div>
@@ -50,6 +58,32 @@ const ProductCard = ({ productData }) => {
                     <button>ADD TO CART</button>
                 </div>
             </div>
+        </div>
+
+        <div>
+        {
+                popupTogle && <div className='popup-container' onClick={changeContent}>
+                    <div className='popup-body' onClick={(e) => e.stopPropagation()}>
+                        <div className='popup-header'>
+                            <button onClick={changeContent} className='px-4 py-2 bg-[#262626] text-white cursor-pointer'>close</button>
+                        </div>
+                        <div className='popup-content'>
+                            {
+                                popupContent.map((pop, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <h2 className='text-white'>{pop.title}</h2>
+                                            
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
         </div>
     );
 };

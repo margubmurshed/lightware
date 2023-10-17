@@ -1,0 +1,23 @@
+[
+    {
+        "image": "https://example.com/image1.jpg",
+        "title": "Sample Title 1",
+        "author": "John Doe",
+        "description": "This is the first sample description.",
+        "date": "2023-10-17"
+    },
+    {
+        "image": "https://example.com/image2.jpg",
+        "title": "Sample Title 2",
+        "author": "Jane Smith",
+        "description": "This is the second sample description.",
+        "date": "2023-10-18"
+    },
+    {
+        "image": "https://example.com/image3.jpg",
+        "title": "Sample Title 3",
+        "author": "Robert Johnson",
+        "description": "This is the third sample description.",
+        "date": "2023-10-19"
+    }
+]
