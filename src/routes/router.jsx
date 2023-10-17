@@ -5,8 +5,17 @@ import AccountDetails from "../components/Dashboard/AccountDetails";
 import UserAddress from "../components/Dashboard/UserAddress";
 import Wishlist from "../components/Dashboard/Wishlist";
 import UserOrders from "../components/Dashboard/UserOrders";
+import Footer from "../shared/Footer/Footer";
 
 export const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <h1>Home Page</h1>
+    },
+    {
+        path: '/footer',
+        element: <Footer />
+    },
     {
         path: '/dashboard',
         element: <Dashboard />,
