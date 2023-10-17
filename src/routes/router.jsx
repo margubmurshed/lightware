@@ -1,45 +1,57 @@
+/** @format */
+
 import { createBrowserRouter } from "react-router-dom";
-import Dashboard from "../components/Dashboard/Dashboard";
-import DashboardHome from "../components/Dashboard/DashboardHome";
-import AccountDetails from "../components/Dashboard/AccountDetails";
-import UserAddress from "../components/Dashboard/UserAddress";
-import Wishlist from "../components/Dashboard/Wishlist";
-import UserOrders from "../components/Dashboard/UserOrders";
-import Footer from "../shared/Footer/Footer";
+import DashboardLayout from "../layouts/DashboardLayout";
+import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/Home/Home";
+import UserOrders from "../pages/Dashboard/UserOrders";
+import AccountDetails from "../pages/Dashboard/AccountDetails";
+import UserAddress from "../pages/Dashboard/UserAddress";
+import Wishlist from "../pages/Dashboard/Wishlist";
+import Login from "../pages/Login/Login";
+import DashboardHome from "../pages/Dashboard/DashboardHome"
+
+
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <h1>Home Page</h1>
-    },
-    {
-        path: '/footer',
-        element: <Footer />
-    },
-    {
-        path: '/dashboard',
-        element: <Dashboard />,
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "dashboard",
+        element: <DashboardLayout />,
         children: [
-            {
-                path: '/dashboard',
-                element: <DashboardHome />
-            },
-            {
-                path: '/dashboard/account-details',
-                element: <AccountDetails />
-            },
-            {
-                path: '/dashboard/address',
-                element: <UserAddress />
-            },
-            {
-                path: '/dashboard/wishlist',
-                element: <Wishlist />
-            },
-            {
-                path: '/dashboard/orders',
-                element: <UserOrders />
-            }
-        ]
-    }
-])
+          {
+            index: true,
+            element: <DashboardHome />,
+          },
+          {
+            path: "/dashboard/account-details",
+            element: <AccountDetails />,
+          },
+          {
+            path: "/dashboard/address",
+            element: <UserAddress />,
+          },
+          {
+            path: "/dashboard/wishlist",
+            element: <Wishlist />,
+          },
+          {
+            path: "/dashboard/orders",
+            element: <UserOrders />,
+          },
+        ],
+      },
+    ],
+  },
+]);
