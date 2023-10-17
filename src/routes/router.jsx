@@ -6,34 +6,43 @@ import UserAddress from "../components/Dashboard/UserAddress";
 import Wishlist from "../components/Dashboard/Wishlist";
 import UserOrders from "../components/Dashboard/UserOrders";
 import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/Home/Home";
 
 export const router = createBrowserRouter([
-    {path: "/", element: <MainLayout />, children: [
-        {
-            path: 'dashboard',
-            element: <DashboardLayout />,
-            children: [
-                {
-                    index: true,
-                    element: <DashboardHome />
-                },
-                {
-                    path: '/dashboard/account-details',
-                    element: <AccountDetails />
-                },
-                {
-                    path: '/dashboard/address',
-                    element: <UserAddress />
-                },
-                {
-                    path: '/dashboard/wishlist',
-                    element: <Wishlist />
-                },
-                {
-                    path: '/dashboard/orders',
-                    element: <UserOrders />
-                }
-            ]
-        },
-    ]}
-])
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "dashboard",
+        element: <DashboardLayout />,
+        children: [
+          {
+            index: true,
+            element: <DashboardHome />,
+          },
+          {
+            path: "/dashboard/account-details",
+            element: <AccountDetails />,
+          },
+          {
+            path: "/dashboard/address",
+            element: <UserAddress />,
+          },
+          {
+            path: "/dashboard/wishlist",
+            element: <Wishlist />,
+          },
+          {
+            path: "/dashboard/orders",
+            element: <UserOrders />,
+          },
+        ],
+      },
+    ],
+  },
+]);
