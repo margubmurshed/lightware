@@ -4,6 +4,7 @@ import DashboardHome from "../components/Dashboard/DashboardHome";
 import AccountDetails from "../components/Dashboard/AccountDetails";
 import UserAddress from "../components/Dashboard/UserAddress";
 import Wishlist from "../components/Dashboard/Wishlist";
+import UserOrders from "../components/Dashboard/UserOrders";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/wishlist',
                 element: <Wishlist />
+            },
+            {
+                path: '/dashboard/orders',
+                element: <UserOrders />
             }
         ]
     }
