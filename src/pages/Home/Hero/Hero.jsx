@@ -8,7 +8,7 @@ const Hero = () => {
       className="h-screen bg-cover bg-no-repeat bg-center relative"
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50 z-1"></div>
+      <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 bg-black opacity-10 z-1"></div>
       <div className="container mx-auto p-5 flex items-center h-full relative z-10">
         <div className="text-white lg:w-1/2 space-y-5">
           <h3 className="tracking-widest">TYPI NON HABENT CLARITATEM INSITAM</h3>
