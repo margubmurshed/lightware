@@ -45,7 +45,7 @@ const Footer = () => {
                         <li className='hoverStyle'>Pages</li>
                     </ul>
                 </div>
-                <div className='px-4 py-2 border-r   border-gray-800 w-48'>
+                <div className='px-4 py-2  w-48'>
                     <h3 className='text-white text-2xl pb-5'>Main Menu</h3>
                     <ul className='text-secondary space-y-3'>
                         <li className='hover:text-[#e51515] hover:translate-x-3 duration-700 transition-all'>Home</li>
