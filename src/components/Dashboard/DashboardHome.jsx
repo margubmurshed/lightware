@@ -1,5 +1,5 @@
 import { IoDocumentTextOutline, IoLocationOutline } from 'react-icons/io5'
-import { AiOutlineDownload, AiOutlineHeart } from 'react-icons/ai'
+import { AiOutlineHeart } from 'react-icons/ai'
 import { VscAccount } from 'react-icons/vsc'
 import { SlLogout } from 'react-icons/sl'
 import { Link } from 'react-router-dom';
@@ -30,7 +30,7 @@ const DashboardHome = () => {
                         <span className='uppercase text-[14px] font-semibold text-[#555555]'>Account Details</span>
                     </div>
                 </Link>
-                <Link to='/'>
+                <Link to='/dashboard/wishlist'>
                     <div className='min-h-[180px] group flex flex-col gap-4 justify-center items-center hover:bg-[#F1F1F1] transition-all duration-300 cursor-pointer shadow-md rounded-md py-5'>
                         <AiOutlineHeart className='text-[#777777] text-[48px] group-hover:text-[#555555] transition-all duration-300' />
                         <span className='uppercase text-[14px] font-semibold text-[#555555]'>Wishlist</span>

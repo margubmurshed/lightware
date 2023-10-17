@@ -3,6 +3,7 @@ import Dashboard from "../components/Dashboard/Dashboard";
 import DashboardHome from "../components/Dashboard/DashboardHome";
 import AccountDetails from "../components/Dashboard/AccountDetails";
 import UserAddress from "../components/Dashboard/UserAddress";
+import Wishlist from "../components/Dashboard/Wishlist";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/address',
                 element: <UserAddress />
+            },
+            {
+                path: '/dashboard/wishlist',
+                element: <Wishlist />
             }
         ]
     }
