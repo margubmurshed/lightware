@@ -1,3 +1,5 @@
+/** @format */
+
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MainLayout from "../layouts/MainLayout";
@@ -7,6 +9,7 @@ import UserOrders from "../pages/Dashboard/UserOrders";
 import AccountDetails from "../pages/Dashboard/AccountDetails";
 import UserAddress from "../pages/Dashboard/UserAddress";
 import Wishlist from "../pages/Dashboard/Wishlist";
+import Login from "../pages/Login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +19,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
       },
       {
         path: "dashboard",

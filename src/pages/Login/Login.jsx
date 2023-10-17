@@ -13,7 +13,7 @@ const Login = () => {
 
   const onSubmit = (data) => console.log(data);
   return (
-    <div className=" my-16 ">
+    <div className=" mb-16 mt-40  ">
       <h1 className="font-medium text-4xl text-[#181b23] mt-5 mb-3 ml-24">
         Account
       </h1>
@@ -30,7 +30,7 @@ const Login = () => {
             date on an order's status, and keep track of the orders you have
             previously made.
           </p>
-          <button className="btn mb-6 bg-black text-white hover:bg-[#994a47] text-xs px-[30px] rounded-br-[30px] rounded-bl-[30px] rounded-tr-[30px] rounded-tl-[30px]">
+          <button className="btn py-4 mb-6 bg-black text-white hover:bg-[#994a47] text-xs px-[30px] rounded-[30px] ">
             continue
           </button>
         </div>
@@ -67,7 +67,7 @@ const Login = () => {
             </div>
             <div className="mb-6">
               <button
-                className="btn  bg-black text-white hover:bg-[#994a47] text-xs px-[30px] rounded-br-[30px] rounded-bl-[30px] rounded-tr-[30px] rounded-tl-[30px]"
+                className="btn py-4  bg-black text-white hover:bg-[#994a47] text-xs px-[30px] rounded-[30px] "
                 type="submit"
               >
                 sign in
