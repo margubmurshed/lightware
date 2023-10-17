@@ -1,7 +1,15 @@
+import { Outlet } from "react-router-dom";
+import DashboardBanner from "./DashboardBanner";
+import Sidebar from "./Sidebar";
+
 const Dashboard = () => {
     return (
         <div>
-            This is the dashboard            
+            <DashboardBanner />    
+            <div className="flex flex-col md:flex-row gap-8 md:gap-4 my-12 px-10">
+                <Sidebar />
+                <Outlet />
+            </div>
         </div>
     );
 };
