@@ -1,3 +1,5 @@
+import React from 'react';
+
 const UserAddress = () => {
     return (
         <div className='md:border-l px-8 min-h-[250px]'>
