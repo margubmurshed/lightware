@@ -4,12 +4,14 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
-import DashboardHome from "../pages/Dashboard/DashboardHome";
 import UserOrders from "../pages/Dashboard/UserOrders";
 import AccountDetails from "../pages/Dashboard/AccountDetails";
 import UserAddress from "../pages/Dashboard/UserAddress";
 import Wishlist from "../pages/Dashboard/Wishlist";
 import Login from "../pages/Login/Login";
+import DashboardHome from "../pages/Dashboard/DashboardHome"
+
+
 
 export const router = createBrowserRouter([
   {
