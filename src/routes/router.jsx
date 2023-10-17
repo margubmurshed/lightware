@@ -1,3 +1,5 @@
+/** @format */
+
 import { createBrowserRouter } from "react-router-dom";
 import Products from "../Layout/Products";
 import OurProducts from "../ProductsPage/OurProducts/OurProducts";

@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
-import DashboardBanner from "./DashboardBanner";
-import Sidebar from "./Sidebar";
+import DashboardBanner from "../pages/Dashboard/DashboardBanner";
+import Sidebar from "../pages/Dashboard/Sidebar";
 
-const Dashboard = () => {
+
+const DashboardLayout = () => {
     return (
         <div>
             <DashboardBanner />
@@ -16,4 +17,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default DashboardLayout;
