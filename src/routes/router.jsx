@@ -6,7 +6,8 @@ import UserAddress from "../components/Dashboard/UserAddress";
 import Wishlist from "../components/Dashboard/Wishlist";
 import UserOrders from "../components/Dashboard/UserOrders";
 import MainLayout from "../layouts/MainLayout";
-import Payment from "../components/Dashboard/Payment/Payment";
+import Payment from "../components/Dashboard/Payment";
+
 
 export const router = createBrowserRouter([
     {path: "/", element: <MainLayout />, children: [
