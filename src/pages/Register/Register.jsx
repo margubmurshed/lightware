@@ -1,8 +1,11 @@
 /** @format */
 
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { FaUser, FaUserAlt } from "react-icons/fa";
+import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const {
@@ -11,8 +14,27 @@ const Register = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
+  const { createUser } = useAuth();
+  const onSubmit = (data) => {
+    createUser(data.email, data.password)
+      .then((result) => {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Your Account Has Been Created",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
 
-  const onSubmit = (data) => console.log(data);
+        const loggedUser = result.user;
+        console.log(loggedUser);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div>
       <div className="mt-36">
@@ -29,9 +51,9 @@ const Register = () => {
           </p>
           <input
             className="border  basis-4/5 pl-3 py-1 mt-1  rounded-md "
-            name="first-name"
+            name="firstName"
             placeholder="First Name"
-            {...register("first-name")}
+            {...register("firstName", { required: true })}
           />
         </div>
         <div className="flex gap-5 items-center justify-end my-2">
@@ -43,7 +65,7 @@ const Register = () => {
             className="border basis-4/5  pl-3 py-1 mt-1  rounded-md "
             name="last-name"
             placeholder="Last Name"
-            {...register("last-name")}
+            {...register("last-name", { required: true })}
           />
         </div>
         <div className="flex gap-5 items-center justify-end my-2">
@@ -55,7 +77,7 @@ const Register = () => {
             className="border basis-4/5  pl-3 py-1 mt-1  rounded-md "
             name="email"
             placeholder="Email"
-            {...register("email")}
+            {...register("email", { required: true })}
           />
         </div>
         <div className="flex  gap-5 items-center justify-end my-2">
@@ -67,7 +89,7 @@ const Register = () => {
             className="border basis-4/5  pl-3 py-1 mt-1  rounded-md "
             name="password"
             placeholder="password"
-            {...register("password")}
+            {...register("password", { required: true })}
           />
         </div>
 
