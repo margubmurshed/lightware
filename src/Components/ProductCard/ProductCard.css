@@ -1,0 +1,66 @@
+.wishlist{
+    opacity: 0;
+    visibility: hidden;
+    transition:0.5s;
+    pointer-events: none;
+}
+.wishCard:hover .wishlist{
+    opacity:1;
+    visibility: visible;
+}
+.icon-set{
+    opacity:0;
+    visibility: hidden;
+    transition:0.5s;
+    transform:translateX(0);
+}
+.main-card:hover .icon-set{
+    opacity:1;
+    visibility: visible;
+    transform:translateX(16px);
+}
+
+.arrow{
+    font-size:30px;
+    padding:8px 8px;
+    background-color:#fff;
+    position: absolute;
+    display:flex;
+    top:150px;
+    z-index:2;
+    transition:0.5s;
+    cursor: pointer;
+    z-index:2;
+}
+.arrow:hover{
+    background-color:#9D4D4A;
+    color:#fff;
+}
+.arrow-prev{
+    right:10px;
+}
+.arrow-next{
+    left:12px;
+}
+
+.popup-container{
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:#000000;
+    padding-top:15%;
+    z-index:999;
+}
+.popup-body{
+    width:70%;
+    height:70%;
+    background-color:#fff;
+    margin:auto;
+}
+.popup-header{
+    position: relative;
+    left:8vh;
+    padding:20px;
+}

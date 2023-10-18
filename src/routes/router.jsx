@@ -3,7 +3,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MainLayout from "../layouts/MainLayout";
-
 import Home from "../pages/Home/Home";
 import UserOrders from "../pages/Dashboard/UserOrders";
 import AccountDetails from "../pages/Dashboard/AccountDetails";
