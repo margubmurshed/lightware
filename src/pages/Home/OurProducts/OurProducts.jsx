@@ -7,7 +7,7 @@ import Jewellery from '../../../Components/ProductsByCategory/Jewellery/Jeweller
 import Featured from '../../../Components/ProductsByCategory/Featured/Featured';
 import NewProducts from '../NewProducts/NewProducts';
 import BestSellProduct from '../BestSellProduct/BestSellProduct';
-import Model from '../QuickViewModel/Model';
+
 
 
 const OurProducts = () => {

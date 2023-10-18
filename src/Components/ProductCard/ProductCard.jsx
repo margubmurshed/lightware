@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 const ProductCard = ({ productData }) => {
-    const { id, featuredImage, title, price, review,discount } = productData
+    const { featuredImage, title, price, review,discount,_id } = productData
 
     const newPrize = price-(discount*price/100);
   
@@ -27,7 +27,7 @@ const ProductCard = ({ productData }) => {
                             <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>Add To Wish List</p>
                         </div>
 
-                       <Link to={`/productdetails/${id}`}>
+                       <Link to={`/productsdetails/${_id}`}>
                        <div className='flex items-center space-x-2 wishCard cursor-pointer'>
                             <p className='text-xl'><GiNetworkBars></GiNetworkBars></p>
                             <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>View Details</p>
@@ -40,7 +40,7 @@ const ProductCard = ({ productData }) => {
                             <p className='text-xl'><AiFillEye></AiFillEye></p>
                             <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>Quick View</p>
                         </div>
-                        <Model></Model>
+                        
                         
                     </div>
                 </div>
