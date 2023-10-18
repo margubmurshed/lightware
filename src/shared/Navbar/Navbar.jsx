@@ -1,27 +1,30 @@
+/** @format */
+
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
+import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
-    const user = true;
+  const { user, logOut } = useAuth();
+  // const user = true;
   const [open, setOpen] = useState(false);
   const commonLinks = [
     { id: 1, text: "Home", to: "/" },
     { id: 2, text: "Shop", to: "/shop" },
   ];
 
-  const nonUserLinks = [
-    { id: 1, text: "Login", to: "/login" },
-  ]
+  const nonUserLinks = [{ id: 1, text: "Login", to: "/login" }];
 
-  const userLinks = [
-    { id: 2, text: "Dashboard", to: "/dashboard" },
-  ]
+  const userLinks = [{ id: 2, text: "Dashboard", to: "/dashboard" }];
 
-  const links = commonLinks.concat(user ? userLinks : nonUserLinks)
+  const links = commonLinks.concat(user ? userLinks : nonUserLinks);
+  const handleLogout = () => {
+    logOut();
+  };
   return (
     <nav className="absolute top-0 left-0 right-0 z-20 select-none">
       <div className="container mx-auto p-5 flex justify-between items-center">
@@ -61,11 +64,21 @@ const Navbar = () => {
               </li>
             ))}
 
-            {user}
+            {user ? (
+              <button
+                className="text-gray-500 hover:text-black lg:text-white lg:hover:text-gray-200 transition-all"
+                onClick={handleLogout}
+              >
+                LogOut
+              </button>
+            ) : (
+              <></>
+            )}
           </ul>
           <div className="flex gap-5 items-center text-white">
-            <RiAccountCircleFill size={30} />
-              <FaShoppingCart size={30} />
+            {user ? user.email : <RiAccountCircleFill size={30} />}
+
+            <FaShoppingCart size={30} />
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 /** @format */
 
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const {
@@ -10,8 +11,18 @@ const Login = () => {
     watch,
     formState: { errors },
   } = useForm();
-
-  const onSubmit = (data) => console.log(data);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+  const { logIn } = useAuth();
+  const onSubmit = (data) => {
+    console.log(data);
+    logIn(data.email, data.password).then((result) => {
+      navigate(from, { replace: true });
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    });
+  };
   return (
     <div className=" mb-16 mt-40  ">
       <h1 className="font-medium text-4xl text-[#181b23] mt-5 mb-3 ml-24">
@@ -51,7 +62,7 @@ const Login = () => {
                 className="border w-full pl-3 py-1 mt-1 rounded-md "
                 name="email"
                 placeholder="Email"
-                {...register("email")}
+                {...register("email", { required: true })}
               />
             </div>
             <div className=" w-11/12 mb-3 ">
@@ -61,7 +72,7 @@ const Login = () => {
                 className="border w-full pl-3 py-1 mt-1 rounded-md hover:border-[#cbcccd]"
                 name="password"
                 placeholder="Password"
-                {...register("password")}
+                {...register("password", { register: true })}
               />
               <span className="text-[#5a6069]">Forgot your password?</span>
             </div>
