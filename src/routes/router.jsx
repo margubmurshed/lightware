@@ -1,28 +1,6 @@
 /** @format */
 
 import { createBrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
-import Products from "../Layout/Products";
-import OurProducts from "../ProductsPage/OurProducts/OurProducts";
-import ProductDetails from "../ProductsPage/ProductDetails/ProductDetails";
-
-export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Products></Products>,
-        children: [
-            {
-                path: '/',
-                element: <OurProducts></OurProducts>  
-            },
-            {
-                path: '/productdetails/:id',
-                element: <ProductDetails></ProductDetails> 
-            }
-        ]
-    }
-])
-=======
 import DashboardLayout from "../layouts/DashboardLayout";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
@@ -85,4 +63,3 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
->>>>>>> e0d67be4d496d911ac1a926a847734a390c0e71b

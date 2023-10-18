@@ -5,7 +5,7 @@ import { AiOutlineShoppingCart, AiFillEye, AiFillHeart } from 'react-icons/ai';
 import { GiNetworkBars } from 'react-icons/gi';
 
 import './ProductCard.css'
-import Model from '../QuickViewModel/Model';
+
 import { Link } from 'react-router-dom';
 
 
