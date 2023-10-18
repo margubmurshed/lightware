@@ -1,5 +1,6 @@
-import { AiOutlineHeart } from 'react-icons/ai';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 const Wishlist = () => {
     return (

@@ -1,8 +1,9 @@
-import { IoDocumentTextOutline, IoLocationOutline } from 'react-icons/io5'
-import { AiOutlineHeart } from 'react-icons/ai'
-import { VscAccount } from 'react-icons/vsc'
-import { SlLogout } from 'react-icons/sl'
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { IoDocumentTextOutline, IoLocationOutline  } from 'react-icons/io5';
+import { VscAccount } from 'react-icons/vsc';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { SlLogout } from 'react-icons/sl';
 
 const DashboardHome = () => {
     return (

@@ -1,4 +1,5 @@
-import {PiWarningCircleBold} from 'react-icons/pi'
+import React from 'react';
+import { PiWarningCircleBold } from 'react-icons/pi'
 
 const UserOrders = () => {
     return (
