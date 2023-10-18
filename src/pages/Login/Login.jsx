@@ -31,7 +31,7 @@ const Login = () => {
             previously made.
           </p>
           <button className="btn py-4 mb-6 bg-black text-white hover:bg-[#994a47] text-xs px-[30px] rounded-[30px] ">
-            continue
+            <Link to="/register">continue</Link>
           </button>
         </div>
         <div className="w-2/5 pl-6  border mb-4  rounded-sm">

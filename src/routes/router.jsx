@@ -10,7 +10,6 @@ import AccountDetails from "../pages/Dashboard/AccountDetails";
 import UserAddress from "../pages/Dashboard/UserAddress";
 import Wishlist from "../pages/Dashboard/Wishlist";
 import Login from "../pages/Login/Login";
-import DashboardHome from "../pages/Dashboard/DashboardHome";
 import Register from "../pages/Register/Register";
 import DashboardHome from "../pages/Dashboard/DashboardHome";
 import Payment from "../pages/Dashboard/Payment";
