@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Title from '../Title/Title';
+import Title from '../../../Components/Title/Title';
 import './OurProducts.css'
-import Cloths from '../ProductsByCategory/Cloths/Cloths';
-import Fashion from '../ProductsByCategory/Fashion/Fashion';
-import Jewellery from '../ProductsByCategory/Jewellery/Jewellery';
-import Featured from '../ProductsByCategory/Featured/Featured';
+import Cloths from '../../../Components/ProductsByCategory/Cloths/Cloths';
+import Fashion from '../../../Components/ProductsByCategory/Fashion/Fashion';
+import Jewellery from '../../../Components/ProductsByCategory/Jewellery/Jewellery';
+import Featured from '../../../Components/ProductsByCategory/Featured/Featured';
 import NewProducts from '../NewProducts/NewProducts';
 import BestSellProduct from '../BestSellProduct/BestSellProduct';
 import Model from '../QuickViewModel/Model';

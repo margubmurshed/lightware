@@ -1,3 +1,5 @@
+import React from 'react';
+
 const AccountDetails = () => {
     return (
         <div className='md:border-l px-8'>

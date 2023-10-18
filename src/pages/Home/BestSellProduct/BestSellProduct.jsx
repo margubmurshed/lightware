@@ -1,6 +1,7 @@
 import React from 'react';
-import useProducts from '../../Hooks/useProducts';
-import ProductCard from '../../ProductCard/ProductCard';
+import Title from '../../../Components/Title/Title';
+
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,7 +9,8 @@ import Slider from 'react-slick';
 
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { BsArrowRightShort } from 'react-icons/bs';
-
+import useProducts from '../../../Hooks/useProducts';
+import ProductCard from '../../../Components/ProductCard/ProductCard';
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -28,9 +30,11 @@ function SamplePrevArrow(props) {
     )
 }
 
-const Fashion = () => {
+const BestSellProduct = () => {
     const [products] = useProducts([])
-    const cloths = products.filter((product) => product.category === 'fashion')
+    const cloths = products.filter((product) => product.subCategory === 'bestSeller')
+
+    console.log(cloths)
 
     var settings = {
         dots: false,
@@ -68,15 +72,26 @@ const Fashion = () => {
           ]
     };
     return (
-        <div >
+        <div className='lg:px-20 px-12 py-8'>
+            <div>
+                <Title
+                    heading={'BEST SELLER PRODUCTS'}
+                    
+
+                >
+
+                </Title>
+            </div>
+
+            <div className='py-8'>
             <Slider {...settings}>
                 {
                     cloths.map(cloth => <ProductCard key={cloth.id} productData={cloth}></ProductCard>)
                 } 
             </Slider>
-            
+            </div>
         </div>
     );
 };
 
-export default Fashion;
+export default BestSellProduct;

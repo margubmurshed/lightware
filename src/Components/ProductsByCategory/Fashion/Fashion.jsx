@@ -1,6 +1,6 @@
-
-import useProducts from '../../Hooks/useProducts';
-import ProductCard from '../../ProductCard/ProductCard';
+import React from 'react';
+import useProducts from '../../../Hooks/useProducts';
+import ProductCard from '../../../Components/ProductCard/ProductCard';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,9 +28,9 @@ function SamplePrevArrow(props) {
     )
 }
 
-const Cloths = () => {
+const Fashion = () => {
     const [products] = useProducts([])
-    const cloths = products.filter((product) => product.category === 'cloth')
+    const cloths = products.filter((product) => product.category === 'fashion')
 
     var settings = {
         dots: false,
@@ -67,7 +67,6 @@ const Cloths = () => {
             }
           ]
     };
-
     return (
         <div >
             <Slider {...settings}>
@@ -80,4 +79,4 @@ const Cloths = () => {
     );
 };
 
-export default Cloths;
+export default Fashion;
