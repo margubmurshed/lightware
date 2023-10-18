@@ -9,9 +9,8 @@ import AccountDetails from "../pages/Dashboard/AccountDetails";
 import UserAddress from "../pages/Dashboard/UserAddress";
 import Wishlist from "../pages/Dashboard/Wishlist";
 import Login from "../pages/Login/Login";
-import DashboardHome from "../pages/Dashboard/DashboardHome"
-
-
+import DashboardHome from "../pages/Dashboard/DashboardHome";
+import Register from "../pages/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
       },
       {
         path: "dashboard",
