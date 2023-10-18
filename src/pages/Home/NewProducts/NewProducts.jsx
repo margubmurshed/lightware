@@ -70,7 +70,7 @@ const NewProducts = () => {
           ]
     };
     return (
-        <div className='lg:px-20 px-12 py-8'>
+        <div className='lg:px-20 p-5'>
             <div>
                 <Title
                     heading={'NEW ARRIVALS'}

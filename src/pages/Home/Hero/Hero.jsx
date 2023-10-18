@@ -14,10 +14,10 @@ const Hero = () => {
         <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 bg-black opacity-10 z-1"></div>
         <div className="container mx-auto p-5 flex items-center h-full relative z-10">
           <div className="text-white lg:w-1/2 space-y-5">
-            <h3 className="tracking-widest">
+            <h3 className="tracking-widest text-normal">
               TYPI NON HABENT CLARITATEM INSITAM
             </h3>
-            <h4 className="font-semibold text-5xl">WORLD LEADING TECHNOLOGY</h4>
+            <h4 className="font-semibold text-3xl md:text-5xl">WORLD LEADING <br /> TECHNOLOGY</h4>
             <h5 className="font-light">
               Claritas est etiam processus dynamicus, qui sequitur mutationem
               consuetudium lectorum. Mirum est notare quam littera gothica, quam
