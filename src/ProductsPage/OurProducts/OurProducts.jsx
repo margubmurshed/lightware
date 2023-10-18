@@ -7,6 +7,7 @@ import Jewellery from '../ProductsByCategory/Jewellery/Jewellery';
 import Featured from '../ProductsByCategory/Featured/Featured';
 import NewProducts from '../NewProducts/NewProducts';
 import BestSellProduct from '../BestSellProduct/BestSellProduct';
+import Model from '../QuickViewModel/Model';
 
 
 const OurProducts = () => {
@@ -78,6 +79,7 @@ const OurProducts = () => {
 
         <NewProducts></NewProducts>
         <BestSellProduct></BestSellProduct>
+        
         </div>
     );
 };

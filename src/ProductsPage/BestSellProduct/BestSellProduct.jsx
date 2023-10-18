@@ -34,6 +34,8 @@ const BestSellProduct = () => {
     const [products] = useProducts([])
     const cloths = products.filter((product) => product.subCategory === 'bestSeller')
 
+    console.log(cloths)
+
     var settings = {
         dots: false,
         infinite: true,
