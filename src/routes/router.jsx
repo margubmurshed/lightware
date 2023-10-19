@@ -13,6 +13,7 @@ import Register from "../pages/Register/Register";
 import DashboardHome from "../pages/Dashboard/DashboardHome";
 import Payment from "../pages/Dashboard/Payment";
 import ProductDetails from "../ProductsPage/ProductDetails/ProductDetails";
+import ProductsReview from "../ProductsPage/ProductsReview/ProductsReview";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,7 @@ export const router = createBrowserRouter([
         path: "/productsdetails/:id",
         element: <ProductDetails></ProductDetails>
       },
+      
       {
         path: "dashboard",
         element: <DashboardLayout />,
