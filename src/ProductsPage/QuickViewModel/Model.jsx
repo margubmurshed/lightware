@@ -1,10 +1,8 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import useProducts from '../../Hooks/useProducts'
 import { Rating } from '@smastrom/react-rating';
 
 export default function Model({ isOpen, setIsOpen, productData }) {
-
     const { discount, code, title, availability, description, price, review, featuredImage, brand } = productData
 
     const newPrize = price - (discount * price / 100);

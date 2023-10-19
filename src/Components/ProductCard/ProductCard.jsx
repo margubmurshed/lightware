@@ -27,7 +27,7 @@ const ProductCard = ({ productData }) => {
 
     return (
         <div>
-            <div className='mx-3 border rounded-md relative main-card cursor-pointer'>
+            <div className='border rounded-md relative main-card cursor-pointer'>
                 <div>
                     <img className='w-full h-full rounded-md' src={featuredImage} alt="" />
                     <div className='top-[4%] left-0 absolute icon-set'>

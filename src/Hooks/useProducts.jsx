@@ -1,18 +1,21 @@
-import { useQuery } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 
 
-const useProducts = () => {
-    const {data:products=[],refetch} = useQuery({
-        queryKey:['products'],
-        queryFn:async() =>{
-            const res = await fetch('http://localhost:5000/products')
-            return res.json()
-        }
-        
-    })
-   
-    return [products,refetch]
+const useProducts = (selectedCategories=[]) => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
     
+    useEffect(() => {
+        setLoading(true)
+        fetch(`http://localhost:5000/products?categories=${selectedCategories.join(",")}`)
+        .then(res => res.json())
+        .then (data => {
+            setProducts(data);
+            setLoading(false);
+        })
+    }, [selectedCategories])
+   
+    return [products, loading ]
 };
 
 export default useProducts;

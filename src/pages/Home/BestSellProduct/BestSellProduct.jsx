@@ -32,8 +32,8 @@ function SamplePrevArrow(props) {
 
 const BestSellProduct = () => {
     const [products] = useProducts([])
-    const cloths = products.filter((product) => product.subCategory === 'bestSeller')
-
+    const cloths = products.filter((product) => product.subCategory === 'Best Seller')
+    console.log(products)
   
 
     var settings = {

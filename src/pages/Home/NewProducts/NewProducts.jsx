@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
 
 const NewProducts = () => {
     const [products] = useProducts([])
-    const cloths = products.filter((product) => product.subCategory === 'newProduct')
+    const cloths = products.filter((product) => product.subCategory === 'New Arrivals')
 
     var settings = {
         dots: false,
