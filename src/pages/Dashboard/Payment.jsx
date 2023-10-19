@@ -13,7 +13,7 @@ const Payment = () => {
                 {name:'pant', qty: 4, price:70}
                  ];
     const total = cart.reduce((sum, item) => sum + item.price, 0);
-    const price = parseFloat.(total.toFixed(2));
+    const price = parseFloat(total.toFixed(2));
     console.log("total==============", total);
    
     return (
