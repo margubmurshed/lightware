@@ -34,6 +34,8 @@ const BestSellProduct = () => {
     const [products] = useProducts([])
     const cloths = products.filter((product) => product.subCategory === 'bestSeller')
 
+  
+
     var settings = {
         dots: false,
         infinite: true,
@@ -70,7 +72,7 @@ const BestSellProduct = () => {
           ]
     };
     return (
-        <div className='lg:px-20 px-12 py-8'>
+        <div className='lg:px-20 p-5'>
             <div>
                 <Title
                     heading={'BEST SELLER PRODUCTS'}
@@ -84,7 +86,7 @@ const BestSellProduct = () => {
             <div className='py-8'>
             <Slider {...settings}>
                 {
-                    cloths.map(cloth => <ProductCard key={cloth.id} productData={cloth}></ProductCard>)
+                    cloths.map(cloth => <ProductCard key={cloth._id} productData={cloth}></ProductCard>)
                 } 
             </Slider>
             </div>

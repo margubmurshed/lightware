@@ -35,6 +35,7 @@ const AuthProvider = ({ children }) => {
     });
   };
   const logOut = () => {
+    localStorage.removeItem('access_token')
     return signOut(auth);
   };
 
@@ -42,6 +43,18 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currenUser) => {
       setUser(currenUser);
       console.log(currenUser);
+      
+      const loggedUser = {email: currenUser.email};
+      fetch('http://localhost:5000/jwt', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(loggedUser)
+      })
+      .then(res => res.json())
+      .then(data => {
+        localStorage.setItem('access_token', data.token)
+      })
+
       setLoading(false);
     });
     return () => {
