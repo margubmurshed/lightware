@@ -6,6 +6,8 @@ import { Rating } from '@smastrom/react-rating';
 import { AiFillHeart } from 'react-icons/ai';
 
 
+
+
 const ProductDetails = () => {
     const { id } = useParams()
     const [singleInfo, setSingleInfo] = useState({})
@@ -78,6 +80,7 @@ const ProductDetails = () => {
                     <div className='py-8'>
                           <button className='bg-[#E51515] px-4 py-3 text-white font-bold  w-full rounded-xl hover:bg-[#9D4D4A] hover:text-white duration-300'>BUY IT NOW</button>
                     </div>
+                   
                  </div>
             </div>
         </div>

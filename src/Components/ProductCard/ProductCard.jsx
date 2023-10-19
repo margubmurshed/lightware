@@ -7,6 +7,7 @@ import { GiNetworkBars } from 'react-icons/gi';
 import './ProductCard.css'
 
 import { Link } from 'react-router-dom';
+import Model from '../../ProductsPage/QuickViewModel/Model';
 
 
 
@@ -15,7 +16,15 @@ const ProductCard = ({ productData }) => {
 
     const newPrize = price-(discount*price/100);
   
-    
+    const [isOpen, setIsOpen] = useState(false)
+
+    const [productId,setProductId] = useState(0)
+
+    const handleModel =(_id) =>{
+        setProductId(_id)
+        setIsOpen(!isOpen)
+    }
+
     return (
         <div>
             <div className='mx-3 border rounded-md relative main-card cursor-pointer'>
@@ -36,10 +45,11 @@ const ProductCard = ({ productData }) => {
                        </Link>
                         
 
-                        <div onClick={() => changeContent(productData)} className='flex items-center space-x-2 wishCard cursor-pointer'>
+                        <div onClick={() =>handleModel(_id)} className='flex items-center space-x-2 wishCard cursor-pointer'>
                             <p className='text-xl'><AiFillEye></AiFillEye></p>
                             <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>Quick View</p>
                         </div>
+                        <Model isOpen={isOpen} setIsOpen={setIsOpen} id={productId}></Model>
                         
                         
                     </div>
