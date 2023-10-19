@@ -4,6 +4,8 @@ import './ProductDetails.css'
 import { Rating } from '@smastrom/react-rating';
 
 import { AiFillHeart } from 'react-icons/ai';
+import ProductsReview from '../ProductsReview/ProductsReview';
+import SimilarProducts from '../SimilarProducts/SimilarProducts';
 
 
 
@@ -42,7 +44,7 @@ const ProductDetails = () => {
 
             <div className='px-12 py-12 grid lg:grid-cols-2 gap-6'>
                  <div>
-                 <img className='rounded-2xl' src={featuredImage} alt="" />
+                 <img className='rounded-2xl w-full' src={featuredImage} alt="" />
                  </div>
 
                  <div>
@@ -67,14 +69,14 @@ const ProductDetails = () => {
                     </div>
                     <h2 className='py-4'>{description}</h2>
 
-                    <div className='flex item-center space-x-8'>
+                    <div className='flex item-center flex-wrap space-x-8 lg:gap-0 gap-4'>
                           <div className='flex item-center space-x-2'>
                             <p className='pt-2'>Qty:</p>
                             <input className='border py-2 outline-none inline-block px-4 rounded-xl' type="number" placeholder='1' />
                           </div>
-                          <div className='flex item-center justify-center space-x-2'>
+                          <div className='flex item-center lg:flex-nowrap lg:gap-0 gap-4 flex-wrap  space-x-2'>
                              <p className='py-2 px-3 rounded-full bg-[#EFEFEF] text-[#363C45] text-xl hover:bg-[#9D4D4A] hover:text-white duration-300'><AiFillHeart></AiFillHeart></p>
-                             <button className='px-16 py-2 rounded-xl bg-[red] text-white font-semibold hover:bg-[#9D4D4A] duration-300'>ADD TO CART</button>
+                             <button className='lg:px-16 py-2 w-full rounded-xl bg-[red] text-white font-semibold hover:bg-[#9D4D4A] duration-300'>ADD TO CART</button>
                           </div>
                     </div>
                     <div className='py-8'>
@@ -83,6 +85,8 @@ const ProductDetails = () => {
                    
                  </div>
             </div>
+            <ProductsReview singleInfo={singleInfo}></ProductsReview>
+            <SimilarProducts></SimilarProducts>
         </div>
     );
 };

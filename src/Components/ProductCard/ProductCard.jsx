@@ -20,8 +20,8 @@ const ProductCard = ({ productData }) => {
 
     const [productId,setProductId] = useState(0)
 
-    const handleModel =(_id) =>{
-        setProductId(_id)
+    const handleModel =(id) =>{
+        setProductId(id)
         setIsOpen(!isOpen)
     }
 
@@ -49,7 +49,7 @@ const ProductCard = ({ productData }) => {
                             <p className='text-xl'><AiFillEye></AiFillEye></p>
                             <p className='px-2 py-1 text-sm bg-[#9D4D4A] rounded-md text-white wishlist'>Quick View</p>
                         </div>
-                        <Model isOpen={isOpen} setIsOpen={setIsOpen} id={productId}></Model>
+                        <Model isOpen={isOpen} setIsOpen={setIsOpen} productData={productData}></Model>
                         
                         
                     </div>

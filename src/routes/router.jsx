@@ -14,6 +14,7 @@ import DashboardHome from "../pages/Dashboard/DashboardHome";
 import Payment from "../pages/Dashboard/Payment";
 import ProductDetails from "../ProductsPage/ProductDetails/ProductDetails";
 import Shop from "../pages/Shop/Shop";
+import ProductsReview from "../ProductsPage/ProductsReview/ProductsReview";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
       },
       { path: "/shop", element: <Shop /> },
+      
       {
         path: "dashboard",
         element: <DashboardLayout />,
