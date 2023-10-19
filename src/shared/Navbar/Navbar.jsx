@@ -18,9 +18,9 @@ const Navbar = () => {
     { id: 2, text: "Shop", to: "/shop" },
   ];
 
-  const nonUserLinks = [{ id: 1, text: "Login", to: "/login" }];
+  const nonUserLinks = [{ id: 3, text: "Login", to: "/login" }];
 
-  const userLinks = [{ id: 2, text: "Dashboard", to: "/dashboard" }];
+  const userLinks = [{ id: 4, text: "Dashboard", to: "/dashboard" }];
 
   const links = commonLinks.concat(user ? userLinks : nonUserLinks);
   const handleLogout = () => {

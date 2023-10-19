@@ -7,7 +7,6 @@ export default function Model({isOpen, setIsOpen,id}) {
 
     const [products] = useProducts([])
     const product = products.find(item => item._id === id)
-    console.log(product)
 
   function closeModal() {
     setIsOpen(false)
