@@ -1,28 +1,25 @@
 /** @format */
 
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
   } = useForm();
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
-  const { logIn } = useAuth();
+  const { logIn, user } = useAuth();
   const onSubmit = (data) => {
-    console.log(data);
-    logIn(data.email, data.password).then((result) => {
+    logIn(data.email, data.password).then(() => {
       navigate(from, { replace: true });
-      const loggedUser = result.user;
-      console.log(loggedUser);
     });
   };
+
+  if (user) return <Navigate to="/" />;
   return (
     <div className=" mb-16 mt-40  ">
       <h1 className="font-medium text-4xl text-[#181b23] mt-5 mb-3 ml-24">
