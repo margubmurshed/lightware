@@ -21,7 +21,7 @@ const OurProducts = () => {
     return (
         <div>
             
-        <div className='lg:px-20 px-12 py-6 bg-[#F8F8F8]'>
+        <div className='lg:px-20 p-5 bg-[#F8F8F8]'>
             <div>
                 <Title
                     heading={'OUR PRODUCTS'}
