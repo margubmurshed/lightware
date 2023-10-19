@@ -72,7 +72,7 @@ const Cloths = () => {
         <div >
             <Slider {...settings}>
                 {
-                    cloths.map(cloth => <ProductCard key={cloth.id} productData={cloth}></ProductCard>)
+                    cloths.map(cloth => <ProductCard key={cloth._id} productData={cloth}></ProductCard>)
                 } 
             </Slider>
             
