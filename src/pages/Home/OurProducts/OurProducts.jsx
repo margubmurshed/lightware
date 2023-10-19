@@ -9,6 +9,7 @@ import NewProducts from '../NewProducts/NewProducts';
 import BestSellProduct from '../BestSellProduct/BestSellProduct';
 
 
+
 const OurProducts = () => {
     
     const [toggle, setToggle] = useState(1)
@@ -78,6 +79,7 @@ const OurProducts = () => {
 
         <NewProducts></NewProducts>
         <BestSellProduct></BestSellProduct>
+        
         </div>
     );
 };
