@@ -1,31 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { PiWarningCircleBold } from 'react-icons/pi'
 import { AuthContext } from '../../provider/AuthProvider';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const UserOrders = () => {
     // const [orders, setOrders] = useState([]]);
 
-    const { user } = useContext(AuthContext);
-    
-    useEffect(() => {
-        const url = `http://localhost:5000/orders?email=${user?.email}`;
+    const { user, loading } = useContext(AuthContext);
+    const [axiosSecure] = useAxiosSecure();
 
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('access_token')}`
-            }
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(!data.error){
-                console.log('jwt implemented correctly');
-                // show orders to the user
-            }
-            else {
-                // logout and redirect to home
-            }
-        }) 
+    useEffect(() => {
+        if (!loading) {
+            axiosSecure.get(`/orders?email=${user?.email}`)
+                .then(res => {
+                    console.log(res);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+        }
     }, [user]);
 
     return (
